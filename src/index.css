@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --color-rose-quartz: #F7A8B8;
+  --color-deep-purple: #7B2CBF;
+  --color-deep-purple-hover: #63209E;
+  --color-ink: #231926;
+  --color-ink-muted: #5E4F63;
+  --color-surface: #FDFBFC;
+  --color-surface-soft: #FAF4F6;
+  --color-border-hairline: #EEDDE2;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    scroll-padding-top: 5.5rem;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
